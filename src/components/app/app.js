@@ -27,7 +27,8 @@ class App extends Component {
             {name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: '6.99$', src: '/img/coffee-shop.jpg', id: 5},
             {name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: '6.99$', src: '/img/coffee-shop.jpg', id: 6}
         ],
-        filter: 'All'
+        filter: 'All',
+        term: ''
     }
 
     filterPost = (items, filter) => {
@@ -48,9 +49,23 @@ class App extends Component {
         this.setState(({filter}));
     }
 
+    onUpdateSearch = (term) => {
+        this.setState({term});
+    }
+
+    searchEmp = (items, term) => {
+        if (items.length === 0){
+            return items;
+        }
+        
+        return items.filter( item => {
+            return item.name.indexOf(term) > -1
+        })
+    }
+
     render() {
-        const {coffee, filter} = this.state;
-        const visiableData = this.filterPost(coffee, filter);
+        const {coffee, filter, term} = this.state;
+        const visiableData = this.filterPost(this.searchEmp(coffee, term), filter);
         return(
             <>
                 {/* <AboutUs/>
@@ -60,7 +75,8 @@ class App extends Component {
                 <OurCoffeeHead/>
                 <AboutOurBeans/>
                 <SearchAndFilter
-                onFilterSelect={this.onFilterSelect}/>
+                onFilterSelect={this.onFilterSelect} 
+                onUpdateSearch={this.onUpdateSearch}/>
                 <CoffeeList
                 data={visiableData}/>
                 <Footer/>

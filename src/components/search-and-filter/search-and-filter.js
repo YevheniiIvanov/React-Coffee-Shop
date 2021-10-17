@@ -1,4 +1,4 @@
-
+import Search from '../search/search';
 import './search-and-filter.scss';
 
 
@@ -26,13 +26,8 @@ const SearchAndFilter = (props) => {
     return (
         <>
             <div className="container searchandfilter">
-                <div className="searchandfilter__search">
-                    <div className="searchandfilter__look">Lookiing for</div>
-                    <input 
-                        type="text"
-                        className="searchandfilter__input"
-                        placeholder="start typing here..."/>
-                </div>
+                <Search 
+                onUpdateSearch={props.onUpdateSearch}/>
                 <div className="searchandfilter__filter">
                     <div className="searchandfilter__info">Or filter</div>
                     {buttons}
