@@ -1,0 +1,21 @@
+.footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;    
+    &__foot{
+        display: flex;
+        justify-content: space-between;
+        width: 355px;
+        font-size: 12px;
+        line-height: 35px;
+        margin-top: 52px;
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    &__picture{
+        width: 35px;
+    }
+}

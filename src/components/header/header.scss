@@ -1,0 +1,23 @@
+.header{
+    &__head{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 355px;
+        top: 52px;
+        left: 150px;
+        font-size: 14px;
+        line-height: 35px;
+        color:#FFFF;
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    &__picture{
+        width: 35px;
+    }
+}
+
+
+

@@ -1,0 +1,43 @@
+.searchandfilter{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    &__look{
+        font-size: 14px;
+        line-height: 30px;
+        padding-right: 19px;
+    }
+    &__search{
+        display: flex;
+        width: 284px;
+        height: 30px;
+    }
+    &__input{
+        width: 180px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        border: none;
+    }
+    &__filter{
+        display: flex;
+        width: 410px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        margin-left: 83px;
+        justify-content: space-around;
+    }
+    &__info{
+        padding-right: 35px;
+    }
+    &__button{
+        font-size: 12px;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border: none;
+        background: #FFFFFF;
+        width: 75px;
+        height: 30px;
+    }
+}

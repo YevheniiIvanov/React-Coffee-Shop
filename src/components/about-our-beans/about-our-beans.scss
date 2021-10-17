@@ -1,0 +1,35 @@
+.aboutourbeans{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    &__picture{
+        display: block;
+        margin-right: 60px;
+    }
+    &__info{
+        display: block;        
+    }
+    &__head{
+        font-size: 24px;    
+        text-align: center;
+    }
+    &__descr{
+        margin-top: 25px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        height: 232px;
+        width: 346px;
+    }
+}
+section::after {
+    content: '';
+    background-color: black;
+    height: 1px;
+    display: block;
+    width: 240px;
+    position: absolute;
+    bottom: 0px;
+  }
