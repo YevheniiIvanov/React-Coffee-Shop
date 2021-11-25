@@ -1,33 +1,32 @@
-import { Component } from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { coffeeSearchTerm } from '../coffee-list/coffeeSlice';
 
 import './search.scss';
 
-class Search extends Component {
-    state = {
-        term: ''
-    }
+const Search = () => {
+    const dispatch = useDispatch();
+    const [term, setTerm] = useState('');
 
-    onUpdateSearch = (e) => {
+    const onUpdateSearch = (e) => {
         const term = e.target.value;
-        this.setState({term});
-        this.props.onUpdateSearch(term)
+        setTerm(term);
+        dispatch(coffeeSearchTerm(term));       
     }
 
-    render(){
-        return(
-            <>
-                <div className="searchandfilter__search">
-                <div className="searchandfilter__look">Lookiing for</div>
-                <input 
-                    type="text"
-                    className="searchandfilter__input"
-                    placeholder="start typing here..."
-                    value={this.state.term}
-                    onChange={this.onUpdateSearch}/>
-                </div>
-            </>
-        )
-    }
+    return(
+        <>
+            <div className="searchandfilter__search">
+            <div className="searchandfilter__look">Lookiing for</div>
+            <input 
+                type="text"
+                className="searchandfilter__input"
+                placeholder="start typing here..."
+                value={term}
+                onChange={(e) => onUpdateSearch(e)}/>
+            </div>
+        </>
+    )
 }
 
 export default Search;

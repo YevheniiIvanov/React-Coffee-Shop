@@ -1,10 +1,10 @@
 import Search from '../search/search';
+import { useDispatch } from 'react-redux';
 import './search-and-filter.scss';
+import { coffeefilterChanged } from '../coffee-list/coffeeSlice';
 
-
-
-
-const SearchAndFilter = (props) => {
+const SearchAndFilter = () => {
+    const dispatch = useDispatch();
     
     const buttonsData = [
         {name: 'All'},
@@ -13,21 +13,23 @@ const SearchAndFilter = (props) => {
         {name: 'Columbia'}
     ];
 
-    const buttons = buttonsData.map(({name}) => {
+    const buttons = buttonsData.map((items) => {
+
+        const {name} = items;
+
         return(
             <button 
             className="searchandfilter__button"
             type="button"
             key={name}
-            onClick={() => {props.onFilterSelect(name)}}>{name}</button>
+            onClick={() => dispatch(coffeefilterChanged(name))}>{name}</button>
         )
     });
 
     return (
         <>
             <div className="container searchandfilter">
-                <Search 
-                onUpdateSearch={props.onUpdateSearch}/>
+                <Search/>
                 <div className="searchandfilter__filter">
                     <div className="searchandfilter__info">Or filter</div>
                     {buttons}

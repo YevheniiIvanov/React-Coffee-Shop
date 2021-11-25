@@ -1,0 +1,66 @@
+{
+  "ourBest": [
+    {
+      "name": "Solimo Coffee Beans 2 kg", 
+      "price": "10.73$", 
+      "src": "/img/class-coffee/solimo.jpg", 
+      "id": 1
+    },
+    {
+      "name": "Presto Coffee Beans 1 kg", 
+      "price": "15.99$", 
+      "src": "/img/class-coffee/presto.jpg", 
+      "id": 2
+    },
+    {
+      "name": "AROMISTICO Coffee 1 kg", 
+      "price": "6.99$", 
+      "src": "/img/class-coffee/aromistico.jpg", 
+      "id": 3
+    }
+  ],
+  "coffee": [
+    {
+      "name": "Solimo Coffee Beans 2 kg kg",
+      "country": "Brazil", 
+      "price": "6.99$", 
+      "src": "/img/coffee-shop.jpg", 
+      "id": 1
+    },
+    {
+      "name": "AROMISTICO Coffee 1 kg", 
+      "country": "Kenya", 
+      "price": "6.99$", 
+      "src": "/img/coffee-shop.jpg", 
+      "id": 2
+    },
+    {
+      "name": "Presto Coffee Beans 1 kg", 
+      "country": "Columbia", 
+      "price": "6.99$", 
+      "src": "/img/coffee-shop.jpg", 
+      "id": 3
+    },
+    {
+      "name": "Presto Coffee Beans 1 kg", 
+      "country": "Brazil", 
+      "price": "6.99$", 
+      "src": "/img/coffee-shop.jpg", 
+      "id": 4
+    },
+    {
+      "name": "AROMISTICO Coffee 1 kg", 
+      "country": "Brazil", 
+      "price": "6.99$", 
+      "src": "/img/coffee-shop.jpg", 
+      "id": 5
+    },
+    {
+      "name": "AROMISTICO Coffee 1 kg", 
+      "country": "Brazil", 
+      "price": "6.99$", 
+      "src": "/img/coffee-shop.jpg", 
+      "id": 6
+    }
+  ]
+}
